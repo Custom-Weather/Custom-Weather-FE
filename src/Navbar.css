@@ -1,0 +1,15 @@
+.side-bar {
+  box-sizing: border-box;
+  border: 3px solid black;
+  padding: 0px;
+  width: 20%;
+  height: 100%;
+  /* align-content: space-between; */
+  /* justify-content: flex-end; */
+  /* display: none; */
+  z-index: 1;
+  position: fixed;
+  left: auto;
+  top: 0em;
+  overflow-x: hidden;
+}
