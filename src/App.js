@@ -1,26 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
+import Navbar from './Navbar';
+import LocationForm from './LocationForm';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      widgets: []
+    }
+  }
+
+  render() {
+    return (
+      <main className='App'>
+      <h1>Custom Weather</h1>
+      <BrowserRouter>
+      <Switch>
+        <Route path="/" exact component={LocationForm} />
+        <Route path="/dashboard" render={props =>
+          <div>
+          <Navbar />
+          <LocationForm />
+        </div> } />
+        </Switch>
+      </BrowserRouter>
+      </main>
+    )
+  }
 }
 
 export default App;
