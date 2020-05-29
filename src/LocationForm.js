@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 import { withRouter } from 'react-router-dom'; // <--- import `withRouter`. We will use this in the bottom of our file.
-import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 class LocationForm extends Component {
 
@@ -18,6 +17,7 @@ class LocationForm extends Component {
   render() {
     return (
       <div>
+      <h1>Custom Weather</h1>
         <form onSubmit={this.submitForm.bind(this)}>
           <label>
             Location:
