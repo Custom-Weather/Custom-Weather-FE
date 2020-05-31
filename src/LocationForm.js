@@ -26,7 +26,7 @@ class LocationForm extends Component {
           </label>
           <button type="submit">Submit</button>
         </form>
-        {console.log(this.props)}
+        location = {console.log(this.props)}
       </div>
     );
   }

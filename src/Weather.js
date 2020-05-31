@@ -1,6 +1,7 @@
 import React from 'react';
 import SunriseSunset from './SunriseSunset'
 import HourlyForecast from './HourlyForecast'
+import LocationTempRange from './LocationTempRange'
 import Navbar from './Navbar'
 import SpotifyPlayer from './SpotifyPlayer'
 
@@ -27,6 +28,11 @@ const Weather = ({weather}) => {
       </div>
 
       <SpotifyPlayer desc={weather.desc}/>
+
+      <LocationTempRange
+      current={weather.current}
+      high={weather.high}
+      low={weather.low}/>
     </div>
   )
 }
