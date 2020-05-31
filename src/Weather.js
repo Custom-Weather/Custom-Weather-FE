@@ -1,6 +1,7 @@
 import React from 'react';
 import SunriseSunset from './SunriseSunset'
 import HourlyForecast from './HourlyForecast'
+import LocationTempRange from './LocationTempRange'
 import Navbar from './Navbar'
 
 const Weather = ({weather}) => {
@@ -21,6 +22,11 @@ const Weather = ({weather}) => {
     sunset={Date(weather.sunset * 1000).split(" ")[4]}/>
 
     {hourlyForecast}
+
+    <LocationTempRange
+    current={weather.current}
+    high={weather.high}
+    low={weather.low}/>
     </div>
   )
 }
