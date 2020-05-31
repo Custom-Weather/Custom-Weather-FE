@@ -1,0 +1,6 @@
+.hourly-forecast{
+  position: absolute;
+  display: inline-block;
+  text-align: center;
+  float: left;
+}

@@ -18,7 +18,7 @@ class App extends Component {
           'sunset': 1586487424,
           'high': 60,
           'low': 43,
-          'desc': 'Clouds',
+          'desc': 'Thunderstorm',
           "hourly":
           [{"dt": 1588935600,
            "temp": 16.75,
