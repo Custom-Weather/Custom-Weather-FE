@@ -3,6 +3,7 @@ import SunriseSunset from './SunriseSunset'
 import HourlyForecast from './HourlyForecast'
 import LocationTempRange from './LocationTempRange'
 import Navbar from './Navbar'
+import SpotifyPlayer from './SpotifyPlayer'
 
 const Weather = ({weather}) => {
   const hourlyForecast = weather.hourly.map(weather => {
@@ -16,17 +17,22 @@ const Weather = ({weather}) => {
   })
 
   return (
-    <div>
-    <SunriseSunset
-    sunrise={Date(weather.sunrise * 1000).split(" ")[4]}
-    sunset={Date(weather.sunset * 1000).split(" ")[4]}/>
+    <div className='weather-comps'>
+      <SunriseSunset
+      sunrise={Date(weather.sunrise * 1000).split(" ")[4]}
+      sunset={Date(weather.sunset * 1000).split(" ")[4]}/>
 
-    {hourlyForecast}
+      <div className="hourly-forecast">
+        <h4>  Hourly Forecast </h4>
+        {hourlyForecast}
+      </div>
 
-    <LocationTempRange
-    current={weather.current}
-    high={weather.high}
-    low={weather.low}/>
+      <SpotifyPlayer desc={weather.desc}/>
+
+      <LocationTempRange
+      current={weather.current}
+      high={weather.high}
+      low={weather.low}/>
     </div>
   )
 }
