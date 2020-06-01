@@ -6,7 +6,8 @@ class LocationForm extends Component {
 
   submitForm (e) {
     e.preventDefault()
-    console.log(this.location.value)
+    console.log(this.props)
+    this.props.updateWeather(this.location.value)
     this.props.history.push('/dashboard'); // <--- The page you want to redirect your user to.
   }
 

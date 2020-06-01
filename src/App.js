@@ -10,6 +10,7 @@ import './App.css';
 class App extends Component {
   constructor() {
     super();
+
     this.state = {
       weather:
         {
@@ -38,25 +39,30 @@ class App extends Component {
                            "description": "moderate rain",
                            "icon": "10n"
                          }
-                       ]
-          }
-        ]
-        }
+                      ]
+                    }
+                  ]
+      }
     }
   }
 
-  // updateWeather = (location) => {
-  //   // fetch call use location from location form
-  //   // this.setState.weather (data from fetch)
-  // }
-  //updateWeather as props with method passed in
+  updateWeather = (location) => {
+    console.log(location.split(', '))
+    fetch(`http://localhost:5000/weather/api/v1/${ encodeURIComponent(location.split(', ')[0]) }&${ encodeURIComponent(location.split(', ')[1])}`,
+          {headers:{"Access-Control-Allow-Origin": "http://localhost:3000"}})
+      .then(response => {return response.json()})
+      .then((data) => {
+        console.log(data)
+        this.setState({weather: data})
+      })
+  }
 
   render() {
     return (
       <main className='App'>
       <BrowserRouter>
       <Switch>
-        <Route path="/" exact component={LocationForm} />
+        <Route path="/" exact component={()=> <LocationForm updateWeather={this.updateWeather}/>} />
         <Route path="/dashboard" render={props =>
           <div className='page'>
             <div className='background-image'>
