@@ -4,10 +4,10 @@ import './HourlyForecast.css';
 const HourlyForecast = ({ hour, icon, temp, desc}) => {
   return (
     <div className='hourly-forecast'>
-      <img src={`http://openweathermap.org/img/wn/${icon}@2x.png`}></img>
+      <p>{temp}</p>
+      <img id='icon' src={`http://openweathermap.org/img/wn/${icon}@2x.png`}></img>
       <p>{hour}</p>
-      <p>Current Temp: {temp}°F</p>
-      <p>Description: {desc}</p>
+      <p>{desc}</p>
     </div>
   );
 };
