@@ -6,26 +6,33 @@ import Navbar from './Navbar'
 import SpotifyPlayer from './SpotifyPlayer'
 
 const Weather = ({weather}) => {
+  console.log(weather)
   const hourlyForecast = weather.hourly.map(weather => {
     return (
       <HourlyForecast
-      hour={Date(weather.dt * 1000).split(" ")[4]}
+      hour={weather.dt}
       icon={weather.weather[0].icon}
       temp={weather.temp}
       desc={weather.weather[0].description}/>
     )
   })
 
+  // const notifications = weather.notifications.map(notification => {
+  //   return (
+  //     <Notifications
+  //     current_desc={weather.desc}
+  //     hour={notification}
+  //     icon={notification.notification[0].icon}
+  //     temp={notification.temp}
+  //     desc={notification.weather[0].description}/>
+  //   )
+  // })
+
   return (
     <div className='weather-comps'>
       <SunriseSunset
-      sunrise={Date(weather.sunrise * 1000).split(" ")[4]}
-      sunset={Date(weather.sunset * 1000).split(" ")[4]}/>
-
-      <div className="hourly-forecast">
-        <h4>  Hourly Forecast </h4>
-        {hourlyForecast}
-      </div>
+      sunrise={weather.sunrise}
+      sunset={weather.sunset}/>
 
       <SpotifyPlayer desc={weather.desc}/>
 
@@ -33,6 +40,12 @@ const Weather = ({weather}) => {
       current={weather.current}
       high={weather.high}
       low={weather.low}/>
+
+      <div className="hourly-forecast">
+        <h4>  Hourly Forecast </h4>
+        {hourlyForecast}
+      </div>
+
     </div>
   )
 }

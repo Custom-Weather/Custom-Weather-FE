@@ -1,6 +1,10 @@
 .hourly-forecast{
   display: inline-block;
-  width: 30%;
-  padding: 1%;
+  padding: 1px;
   font-size: 12px;
+  border-color: white;
+}
+
+.icon {
+  size: 20%
 }
