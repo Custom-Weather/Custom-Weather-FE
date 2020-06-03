@@ -45,17 +45,27 @@
   display: flow-root;
 }
 
+
 .weather-components{
   /* background-color: white; */
   padding: 1%;
   display: inline-table;
   height: 100%;
   z-index: 1;
-  top: 10%;
+  top: 1%;
 }
+
 
 .page{
   text-align: center;
+}
+
+.location-inline-form{
+  position: fixed;
+  top: 3%;
+  left: 2%;
+  background-color: white;
+  padding: 4px;
 }
 
 .form-only {

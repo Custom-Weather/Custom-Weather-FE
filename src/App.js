@@ -79,7 +79,9 @@ class App extends Component {
                 <BackgroundImage desc={this.state.weather.desc} />
               </div>
               <div className='weather-components'>
-                <LocationForm updateWeather={this.updateWeather} className='location-inline-form'/>
+                <div className='location-inline-form'>
+                <LocationForm updateWeather={this.updateWeather} />
+                </div>
                 <Weather weather={this.state.weather} location={this.state.location}/>
               </div>
             </div>} />

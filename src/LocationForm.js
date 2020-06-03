@@ -44,7 +44,6 @@ class LocationForm extends Component {
       <div>
         <form onSubmit={this.submitForm.bind(this)}>
           <label>
-            Location:
             <input type="text" placeholder='Type in city and state' ref={node => { this.location = node; }}
             />
           </label>
