@@ -33,6 +33,7 @@ class LocationForm extends Component {
            .then((response) => response.json())
            .then((data) => {
              this.props.updateWeather(data.results[0].geometry.location, this.location.value)
+             this.location.value = "";
              this.props.history.push('/dashboard');
            })
     }
@@ -41,7 +42,6 @@ class LocationForm extends Component {
   render() {
     return (
       <div>
-      <h1>Custom Weather</h1>
         <form onSubmit={this.submitForm.bind(this)}>
           <label>
             Location:
