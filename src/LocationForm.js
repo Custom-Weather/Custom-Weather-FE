@@ -42,6 +42,7 @@ class LocationForm extends Component {
   render() {
     return (
       <div>
+      <h1>Custom Weather</h1>
         <form onSubmit={this.submitForm.bind(this)}>
           <label>
             <input type="text" placeholder='Type in city and state' ref={node => { this.location = node; }}

@@ -38,7 +38,7 @@ class Weather extends Component {
 
         <Toggle render ={({display, toggle}) => (
           <div>
-          {display && <SpotifyPlayer desc={this.props.weather.desc}/>}
+          {display && <SpotifyPlayer desc={this.props.weather.desc} code={this.props.weather.spotify}/>}
           <button onClick={toggle} className="nav-bar" id='button2'>Weather Music</button>
           </div>
         )}

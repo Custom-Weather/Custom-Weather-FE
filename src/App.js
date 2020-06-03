@@ -3,8 +3,10 @@ import Navbar from './Navbar';
 import LocationForm from './LocationForm';
 import Weather from './Weather';
 import BackgroundImage from './BackgroundImage'
+import BackButton from './BackButton'
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './App.css';
+import { withRouter } from 'react-router-dom';
 
 class App extends Component {
   constructor() {
@@ -61,7 +63,6 @@ class App extends Component {
         <Switch>
         <Route path="/" render={props =>
           <div>
-          <h1>Custom Weather</h1>
           <LocationForm updateWeather={this.updateWeather}/>
           </div>} />
         </Switch>
@@ -78,10 +79,8 @@ class App extends Component {
               <div className='background-image'>
                 <BackgroundImage desc={this.state.weather.desc} />
               </div>
+              <BackButton />
               <div className='weather-components'>
-                <div className='location-inline-form'>
-                <LocationForm updateWeather={this.updateWeather} />
-                </div>
                 <Weather weather={this.state.weather} location={this.state.location}/>
               </div>
             </div>} />
