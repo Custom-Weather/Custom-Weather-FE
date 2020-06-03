@@ -23,30 +23,30 @@
   z-index: 100;
   color: red;
   background-color: lightyellow;
-  left: 5%;
+  left: 15%;
   padding: 8px;
 }
 
 #button1{
   position: fixed;
-  left: 5%;
-  top: 20%;
+  left: 30%;
+  top: 2.5%;
 }
 
 #button2{
   position: fixed;
-  left: 5%;
-  top: 25%;
+  left: 39%;
+  top: 2.5%;
 }
 
 #button3{
   position: fixed;
-  left: 5%;
-  top: 30%;
+  left: 47%;
+  top: 2.5%;
 }
 
 #button4{
   position: fixed;
-  left: 5%;
-  top: 35%;
+  left: 56.5%;
+  top: 2.5%;
 }

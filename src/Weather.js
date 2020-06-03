@@ -43,17 +43,7 @@ class Weather extends Component {
         <Toggle render ={({display, toggle}) => (
           <div>
           {display && <SpotifyPlayer desc={this.props.weather.desc}/>}
-          <button onClick={toggle} className="nav-bar" id='button2'>Show/Hide</button>
-          </div>
-        )}
-        />
-
-        <Toggle render ={({display, toggle}) => (
-          <div>
-          {display && <SunriseSunset
-          sunrise={this.props.weather.sunrise}
-          sunset={this.props.weather.sunset}/>}
-          <button onClick={toggle} className="nav-bar" id='button1'>Show/Hide</button>
+          <button onClick={toggle} className="nav-bar" id='button2'>Weather Music</button>
           </div>
         )}
         />
@@ -65,7 +55,17 @@ class Weather extends Component {
           current={this.props.weather.current}
           high={this.props.weather.high}
           low={this.props.weather.low}/>}
-          <button onClick={toggle} className="nav-bar" id='button3'>Show/Hide</button>
+          <button onClick={toggle} className="nav-bar" id='button3'>Current, High, Low</button>
+          </div>
+        )}
+        />
+
+        <Toggle render ={({display, toggle}) => (
+          <div>
+          {display && <SunriseSunset
+          sunrise={this.props.weather.sunrise}
+          sunset={this.props.weather.sunset}/>}
+          <button onClick={toggle} className="nav-bar" id='button1'>Sunrise & Sunset</button>
           </div>
         )}
         />
@@ -76,7 +76,7 @@ class Weather extends Component {
             <h4>  Hourly Forecast </h4>
             {this.hourlyForecast}
           </div>}
-          <button onClick={toggle} className="nav-bar" id='button4'>Show/Hide</button>
+          <button onClick={toggle} className="nav-bar" id='button4'>Hourly Forecasts</button>
           </div>
         )}
         />
