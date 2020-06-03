@@ -50,7 +50,7 @@ class Weather extends Component {
 
 
         <Toggle render ={({display, toggle}) => (
-          <div>
+          <div className='LocationTempRange'>
           {display && <LocationTempRange
           current={this.props.weather.current}
           high={this.props.weather.high}

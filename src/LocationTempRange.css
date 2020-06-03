@@ -13,9 +13,9 @@
 }
 
 .high{
-  float: inherit;
+  float: left;
 }
 
 .low{
-  float: inherit;
+  float: right;
 }
