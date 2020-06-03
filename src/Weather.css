@@ -52,6 +52,12 @@
   top: 2.5%;
 }
 
+#button5{
+  position: fixed;
+  left: 65.5%;
+  top: 2.5%;
+}
+
 .LocationTempRange {
   position: absolute;
   text-align: center;

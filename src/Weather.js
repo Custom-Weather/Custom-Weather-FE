@@ -3,6 +3,9 @@ import SunriseSunset from './SunriseSunset'
 import HourlyForecast from './HourlyForecast'
 import LocationTempRange from './LocationTempRange'
 import SpotifyPlayer from './SpotifyPlayer'
+import EventInfo from './EventInfo'
+import BookInfo from './BookInfo'
+import MovieInfo from './MovieInfo'
 import Toggle from './ToggleRenderProps'
 import './Weather.css';
 
@@ -24,25 +27,18 @@ class Weather extends Component {
     )
   })
 
-  showComponents = (status) => {
-    console.log(status)
-  }
-
-  showSunriseSunset = (
-    <SunriseSunset
-    sunrise={this.props.weather.sunrise}
-    sunset={this.props.weather.sunset}/>)
-
+  events = (Object.keys(this.props.weather.notifications).length === 5)
+  books = (Object.keys(this.props.weather.notifications).length === 2)
 
   render () {
-      console.log(this.props.weather)
+
     return (
       <div className='weather-comps'>
         <h1 className='current-location'>{this.props.location}</h1>
 
         <Toggle render ={({display, toggle}) => (
           <div>
-          {display && <SpotifyPlayer desc={this.props.weather.desc}/>}
+          {display && <SpotifyPlayer desc={this.props.weather.desc} code={this.props.weather.spotify}/>}
           <button onClick={toggle} className="nav-bar" id='button2'>Weather Music</button>
           </div>
         )}
@@ -80,9 +76,29 @@ class Weather extends Component {
           </div>
         )}
         />
+
+        {this.events && <Toggle render ={({display, toggle}) => (
+          <div>
+          {display && <EventInfo notifications={this.props.weather.notifications}/>}
+          <button onClick={toggle} className="nav-bar" id='button5'>Notifications</button>
+          </div>
+        )}
+        />}
+
+        {this.books && <Toggle render ={({display, toggle}) => (
+          <div>
+          {display && <div>
+            <BookInfo notifications={this.props.weather.notifications}/>
+            <MovieInfo notifications={this.props.weather.notifications}/>
+          </div>}
+          <button onClick={toggle} className="nav-bar" id='button5'>Notifications</button>
+          </div>
+        )}
+        />}
+
       </div>
     )
   }
-  }
+}
 
 export default Weather;

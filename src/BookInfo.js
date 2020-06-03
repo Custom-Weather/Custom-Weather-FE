@@ -1,11 +1,18 @@
 import React from 'react';
+import BookDetail from './BookDetail';
 import './BookInfo.css';
 
-const BookInfo = ({ book }) => {
+const BookInfo = ({ notifications }) => {
+  const books = Object.values(notifications.books).map(bookDetail => {
+    return(
+      <BookDetail
+      book={bookDetail}/>
+    )
+  })
+
   return (
     <div className='book-info'>
-      <h4> Read a book for once in your life: </h4>
-      <p>{book}</p>
+      <p>{books}</p>
     </div>
   )
 }

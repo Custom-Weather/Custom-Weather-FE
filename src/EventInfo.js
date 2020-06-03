@@ -1,11 +1,19 @@
 import React from 'react';
+import EventDetail from './EventDetail';
 import './EventInfo.css';
 
-const EventInfo = ({ name, link }) => {
+const EventInfo = ({ notifications }) => {
+  const events = Object.values(notifications).map(eventDetail => {
+  return(
+    <EventDetail
+    name={eventDetail.name}
+    url={eventDetail.url}/>
+  )
+})
+
   return (
     <div className='event-info'>
-      <h4> Get out of your comfort zone and go to an event: </h4>
-      <p><a href="link"> name</a></p>
+      {events}
     </div>
   );
 };

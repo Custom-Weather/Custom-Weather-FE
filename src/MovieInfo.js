@@ -1,13 +1,20 @@
 import React from 'react';
+import MovieDetail from './MovieDetail';
 import './MovieInfo.css';
 
-const MovieInfo = ({ movie }) => {
+const MovieInfo = ({ notifications }) => {
+  const movies = Object.values(notifications.movies).map(movieDetail => {
+    return(
+      <MovieDetail
+      movie={movieDetail}/>
+    )
+  })
+
   return (
     <div className='movie-info'>
-      <h4>Check out a flick:</h4>
-      <p>{movie}</p>
+      <p>{movies}</p>
     </div>
-  );
-};
+  )
+}
 
 export default MovieInfo;
