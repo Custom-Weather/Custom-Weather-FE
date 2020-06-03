@@ -1,27 +1,31 @@
 import React from 'react';
 import './Navbar.css';
 
-const Navbar = () => {
-  const widgets = [
-    'SunriseSunset',
-    'HourlyForecast',
-    'BackgroundImage',
-    'LocationTempRange',
-    'LocationWelcome',
-    'SpotifyPlayer'
-  ]
+class Navbar extends React.Component {
+  constructor() {
+    super()
+    this.state = { isComponentActive: false}
+    this.onClick = this.onClick.bind(this)
+  }
 
-  const widgetList = widgets.map(widget => {
+  onClick () {
+    console.log(this.state.isComponentActive)
+    this.setState({
+      isComponentActive: !this.state.isComponentActive
+    })
+
+    this.props.showComponents(this.state.isComponentActive)
+  }
+
+  render () {
     return (
-      <button>{widget}</button>
-    )}
-  )
-  return (
-    <div className='side-bar'>
-      <h2>Widgets</h2>
-      {widgetList}
-    </div>
-  )
+      <div className='side-bar'>
+        {this.props.children}
+        <h2>Widgets</h2>
+        <button onClick={this.onClick} className={this.state.isComponentActive ? 'SunriseSunset-active' : 'SunriseSunset-inactive'}>SunriseSunset</button>
+      </div>
+    )
+  }
 }
 
 export default Navbar;

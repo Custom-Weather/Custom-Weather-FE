@@ -55,7 +55,7 @@ class App extends Component {
   }
 
   render() {
-      if(this.state.weather.current == 'Just Test Data') {return (
+      if(this.state.weather.current === 'Just Test Data') {return (
         <div className='form-only'>
         <BrowserRouter>
         <Switch>
@@ -71,7 +71,6 @@ class App extends Component {
           <Route path="/" exact component={()=> <LocationForm updateWeather={this.updateWeather}/>}  />
           <Route path="/dashboard" render={props =>
             <div className='page'>
-              <div className='navbar'>< Navbar /></div>
               <div className='background-image'>
                 <BackgroundImage desc={this.state.weather.desc} />
               </div>
