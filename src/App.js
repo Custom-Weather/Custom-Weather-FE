@@ -59,7 +59,11 @@ class App extends Component {
         <div className='form-only'>
         <BrowserRouter>
         <Switch>
-        <Route path="/" exact component={()=> <LocationForm updateWeather={this.updateWeather}/>}  />
+        <Route path="/" render={props =>
+          <div>
+          <h1>Custom Weather</h1>
+          <LocationForm updateWeather={this.updateWeather}/>
+          </div>} />
         </Switch>
         </BrowserRouter>
         </div>
@@ -75,7 +79,8 @@ class App extends Component {
                 <BackgroundImage desc={this.state.weather.desc} />
               </div>
               <div className='weather-components'>
-                <Weather weather={this.state.weather}/>
+                <LocationForm updateWeather={this.updateWeather} className='location-inline-form'/>
+                <Weather weather={this.state.weather} location={this.state.location}/>
               </div>
             </div>} />
             </Switch>
