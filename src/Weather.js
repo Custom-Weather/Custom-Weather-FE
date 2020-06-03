@@ -27,6 +27,30 @@ const Weather = ({weather}) => {
   //   )
   // })
 
+  // if (notificationsKeys.length === 2) {
+//     const books=weather.notifications.books.map(book => {
+//     return (
+//     <BookInfo
+//     bookTitle={book[1]}/>
+//   )},
+//     // weather.notifications.movies.map(movie => {
+//     // return (
+//     // <MovieInfo
+//     //   movies={movie}/>)
+//     //     })
+//   )
+// } else {
+//    return (
+//     weather.notifications.map(weather =>{
+//       return (
+//         <EventInfo
+//           event={weather.name}
+//           link={weather.url}/>
+//         )}
+//       ))
+//   }
+
+
 
   return (
     <div>
