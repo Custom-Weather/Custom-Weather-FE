@@ -1,6 +1,44 @@
 .hourly-forecast{
-  position: flex;
+  position: inherit;
   text-align: center;
-  float: left;
-  width: 80%;
+  padding-top: 20%;
+  width: 93%;
+}
+
+.single-forecast{
+  position: static;
+  display: inline-block;
+  width: 8%;
+}
+
+.nav-bar{
+  z-index: 100;
+  color: red;
+  background-color: lightyellow;
+  left: 5%;
+  padding: 8px;
+}
+
+#button1{
+  position: fixed;
+  left: 5%;
+  top: 20%;
+}
+
+#button2{
+  position: fixed;
+  left: 5%;
+  top: 25%;
+}
+
+#button3{
+  position: fixed;
+  left: 5%;
+  top: 30%;
+}
+
+#button4{
+  position: fixed;
+  left: 5%;
+  top: 35%;
 }
