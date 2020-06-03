@@ -12,7 +12,7 @@ const SpotifyPlayer = ({desc}) => {
 
   return (
     <div className='spotify-player'>
-      <iframe data-testid='spotify-player' src={"https://open.spotify.com/embed/playlist/" + playlists[desc]} width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+      <iframe data-testid='spotify-player' src={"https://open.spotify.com/embed/playlist/" + playlists[desc]} width="300" height="380" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
     </div>
   )
 }
