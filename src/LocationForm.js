@@ -48,12 +48,12 @@ class LocationForm extends Component {
             <input type="text" placeholder='Type in city and state' data-testid='location-input' ref={node => { this.location = node; }}
             />
           </label>
-          <button type="submit">Submit</button>
-          <button type="submit">Use Current Location</button>
+          <button data-testid='input-submit' type="submit">Submit</button>
+          <button data-testid='current-submit' type="submit">Use Current Location</button>
         </form>
       </div>
     );
   }
 }
 
-export default withRouter(LocationForm); // <--- make sure to wrap your component with `withRouter()`
+export default (LocationForm); // <--- make sure to wrap your component with `withRouter()`

@@ -7,8 +7,8 @@ const SunriseSunset = ({ sunrise, sunset }) => {
   console.log(sunrise)
   return (
     <div className='sunrise-sunset'>
-    <p className='sunrise'><img id='sunrise-img' src={sunriseImg}></img>{sunrise}</p>
-    <p className='sunset'><img id='sunset-img' src={sunsetImg}></img>{sunset}</p>
+    <p className='sunrise'><img id='sunrise-img' alt='sunrise-image' src={sunriseImg}></img>{sunrise}</p>
+    <p className='sunset'><img id='sunset-img' alt='sunset-image' src={sunsetImg}></img>{sunset}</p>
     </div>
   )
 }

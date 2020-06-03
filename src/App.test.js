@@ -9,11 +9,11 @@ afterEach(cleanup)
 
     expect(asFragment(<App />)).toMatchSnapshot()
   })
-
-  it('renders welcome message', () => {
-    const { getByText } = render(<App />);
-    expect(getByText('Learn React')).toBeInTheDocument();
-  });
+//
+  // it('renders welcome message', () => {
+  //   const { getByText } = render(<App />);
+  //   expect(getByText('Learn React')).toBeInTheDocument();
+  // });
 
 // test('renders learn react link', () => {
 //   const { getByText } = render(<App />);

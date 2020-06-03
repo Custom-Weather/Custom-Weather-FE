@@ -1,33 +1,32 @@
-import React from "react"
-import {render, cleanup} from '@testing-library/react'
+import React from 'react';
+import { render, cleanup } from '@testing-library/react';
+import '@testing-library/jest-dom';
 import LocationForm from './LocationForm';
 
-afterEach(cleanup)
-
- it('should take a snapshot', () => {
-    const { asFragment } = render(<LocationForm />)
-
-    expect(asFragment(<LocationForm />)).toMatchSnapshot()
+describe("LocationForm", () => {
+  let mockRender;
+  beforeEach(() => {
+    mockRender=render(
+      <LocationForm
+      placeholder={"Type in city and state"}
+      inputSubmit={"Submit"}
+      currentSubmit={"Use Current Location"}
+      />
+    )
   })
 
+  afterEach(() => {
+    cleanup()
+  })
 
+  it("should render homepage location input form", () => {
+    const { getByTestId } = mockRender;
+    const placeholderEl = getByTestId("location-input")
+    expect(placeholderEl).toBeInTheDocument();
+    const inputSubmitEl = getByTestId("input-submit")
+    expect(inputSubmitEl).toBeInTheDocument();
+    const currentSubmitEl = getByTestId("current-submit")
+    expect(currentSubmitEl).toBeInTheDocument();
 
-
-// it("renders correctly", () => {
-//   const {queryByTestId, queryByPlaceholderText} = render(<LocationForm/>)
-//
-//   expect(queryByTestId("location-input")).toBeTruthy()
-//   expect(queryByPlaceholderText("Type in city and state")).toBeTruthy()
-// })
-//
-// describe("Input value", () => {
-//   it("updates on change", () => {
-//     const {queryByPlaceholderText} = render(<LocationForm/>)
-//
-//     const searchInput = queryByPlaceholderText('Type in city and state');
-//
-//     fireEvent.change(searchInput, {target: {value: "test"}})
-//
-//     expect(searchInput.value).toBe("test")
-//   })
-// })
+  })
+})

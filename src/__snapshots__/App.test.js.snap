@@ -9,26 +9,30 @@ exports[`should take a snapshot 1`] = `
       <h1>
         Custom Weather
       </h1>
-      <form>
-        <label>
-          Location:
-          <input
-            data-testid="location-input"
-            placeholder="Type in city and state"
-            type="text"
-          />
-        </label>
-        <button
-          type="submit"
-        >
-          Submit
-        </button>
-        <button
-          type="submit"
-        >
-          Use Current Location
-        </button>
-      </form>
+      <div>
+        <form>
+          <label>
+            Location:
+            <input
+              data-testid="location-input"
+              placeholder="Type in city and state"
+              type="text"
+            />
+          </label>
+          <button
+            data-testid="input-submit"
+            type="submit"
+          >
+            Submit
+          </button>
+          <button
+            data-testid="current-submit"
+            type="submit"
+          >
+            Use Current Location
+          </button>
+        </form>
+      </div>
     </div>
   </div>
 </DocumentFragment>
