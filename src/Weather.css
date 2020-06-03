@@ -1,6 +1,59 @@
 .hourly-forecast{
-  position: flex;
+  position: inherit;
   text-align: center;
-  float: left;
-  width: 80%;
+  padding-top: 2%;
+  width: 93%;
+  bottom: 3%;
+}
+
+.single-forecast{
+  position: static;
+  display: inline-block;
+  width: 8%;
+}
+
+.current-location{
+  position: fixed;
+  right: 2%;
+  top: 0%;
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke: 2px black;
+}
+
+.nav-bar{
+  z-index: 100;
+  color: red;
+  background-color: lightyellow;
+  left: 15%;
+  padding: 8px;
+}
+
+#button1{
+  position: fixed;
+  left: 30%;
+  top: 2.5%;
+}
+
+#button2{
+  position: fixed;
+  left: 39%;
+  top: 2.5%;
+}
+
+#button3{
+  position: fixed;
+  left: 47%;
+  top: 2.5%;
+}
+
+#button4{
+  position: fixed;
+  left: 56.5%;
+  top: 2.5%;
+}
+
+.LocationTempRange {
+  position: absolute;
+  text-align: center;
+  top: 10%;
 }

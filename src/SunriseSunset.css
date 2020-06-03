@@ -1,0 +1,22 @@
+.sunrise-sunset {
+  text-align: center;
+  display: inline-inline-block;
+}
+
+.sunrise {
+  float: left;
+  display: inline-block;
+}
+
+.sunset {
+  display: inline-block;
+  float: left;
+}
+#sunrise-img {
+  width: 60%;
+  align-content: center;
+}
+
+#sunset-img {
+  width: 60%;
+}

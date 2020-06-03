@@ -1,0 +1,21 @@
+#high-temp-img{
+  height: 5%;
+  width: 5%;
+}
+
+#low-temp-img{
+  height: 6%;
+  width: 6%;
+}
+
+.temp-container {
+  display: inline-block;
+}
+
+.high{
+  float: left;
+}
+
+.low{
+  float: right;
+}
