@@ -7,3 +7,8 @@ cache:
 script:
   - npm test
   - npm run build
+deploy:
+  - provider: heroku
+  - app: https://custom-weather-fe.herokuapp.com/
+  - api_key:
+    secure: 
