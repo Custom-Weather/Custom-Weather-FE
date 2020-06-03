@@ -1,50 +1,45 @@
 import React from 'react';
-import SunriseSunset from './SunriseSunset'
-import HourlyForecast from './HourlyForecast'
-import LocationTempRange from './LocationTempRange'
-import Navbar from './Navbar'
-import SpotifyPlayer from './SpotifyPlayer'
+import SunriseSunset from './SunriseSunset';
+import HourlyForecast from './HourlyForecast';
+import LocationTempRange from './LocationTempRange';
+import BookInfo from './BookInfo';
+import MovieInfo from './MovieInfo';
+import EventInfo from './EventInfo';
+import Navbar from './Navbar';
 
 const Weather = ({weather}) => {
-  console.log(weather)
   const hourlyForecast = weather.hourly.map(weather => {
     return (
       <HourlyForecast
-      hour={weather.dt}
+      hour={Date(weather.dt * 1000).split(" ")[4]}
       icon={weather.weather[0].icon}
       temp={weather.temp}
       desc={weather.weather[0].description}/>
     )
   })
-
-  // const notifications = weather.notifications.map(notification => {
+  let notificationsKeys = Object.keys(weather.notifications)
+  console.log(weather.notifications[0])
+  // const eventInfo = Object.values(weather.notifications[0]).map(activity => {
   //   return (
-  //     <Notifications
-  //     current_desc={weather.desc}
-  //     hour={notification}
-  //     icon={notification.notification[0].icon}
-  //     temp={notification.temp}
-  //     desc={notification.weather[0].description}/>
+  //     <EventInfo
+  //     name={activity.name}
+  //     link={activity.url}/>
   //   )
   // })
 
+
   return (
-    <div className='weather-comps'>
-      <SunriseSunset
-      sunrise={weather.sunrise}
-      sunset={weather.sunset}/>
+    <div>
+    <SunriseSunset
+    sunrise={Date(weather.sunrise * 1000).split(" ")[4]}
+    sunset={Date(weather.sunset * 1000).split(" ")[4]}/>
 
-      <SpotifyPlayer desc={weather.desc}/>
+    {hourlyForecast}
 
-      <LocationTempRange
-      current={weather.current}
-      high={weather.high}
-      low={weather.low}/>
-
-      <div className="hourly-forecast">
-        <h4>  Hourly Forecast </h4>
-        {hourlyForecast}
-      </div>
+    <LocationTempRange
+    current={weather.current}
+    high={weather.high}
+    low={weather.low}/>
 
     </div>
   )
