@@ -10,3 +10,10 @@ If you'd like to checkout the frontend React application, it can be found at htt
 * David Holtkamp - https://github.com/david-holtkamp
 
 <img width="760" alt="Dashboard screenshot" src="https://user-images.githubusercontent.com/54868358/83806087-2d02e800-a66e-11ea-9df9-e1319b139784.png">
+
+### Local Installation
+
+* Clone repo to local machine: 
+```
+ git clone git@github.com:Custom-Weather/Custom-Weather-FE.git
+```
