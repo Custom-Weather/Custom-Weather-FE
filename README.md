@@ -9,3 +9,4 @@ If you'd like to checkout the frontend React application, it can be found at htt
 * Kathleen Carroll - https://github.com/kathleen-carroll
 * David Holtkamp - https://github.com/david-holtkamp
 
+<img width="760" alt="Dashboard screenshot" src="https://user-images.githubusercontent.com/12539215/83649299-445daa80-a574-11ea-973f-39d4eb3cfdde.png">
