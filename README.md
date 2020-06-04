@@ -17,3 +17,11 @@ If you'd like to checkout the frontend React application, it can be found at htt
 ```
  git clone git@github.com:Custom-Weather/Custom-Weather-FE.git
 ```
+* Install packages
+``` 
+npm install 
+```
+* Fire up local server
+```
+npm start
+```
