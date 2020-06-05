@@ -12,6 +12,7 @@ const MovieInfo = ({ notifications }) => {
 
   return (
     <div className='movie-info'>
+    <h3> Here's some movies if that's your style: </h3>
       <p>{movies}</p>
     </div>
   )

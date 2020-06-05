@@ -1,65 +1,97 @@
 .hourly-forecast{
   position: inherit;
   text-align: center;
-  padding-top: 2%;
-  width: 93%;
+  width: 100%;
   bottom: 3%;
+  padding-top: 40%;
 }
 
 .single-forecast{
   position: static;
   display: inline-block;
   width: 8%;
+  background-color: white;
+  opacity: 0.85;
+}
+
+#forecast-title {
+  top: 62%;
+  left: 47%;
+  position: fixed;
+  opacity: 0.40;
+  z-index: 2;
+}
+
+#single-forecast-0 {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+#single-forecast-11 {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 
 .current-location{
   position: fixed;
   right: 2%;
   top: 0%;
-  -webkit-text-fill-color: white;
+  -webkit-text-fill-color: #fcffa4;
   -webkit-text-stroke: 2px black;
 }
 
 .nav-bar{
   z-index: 100;
-  color: red;
-  background-color: lightyellow;
+  color: white;
+  /* background-color: #fcffa4; */
+  background-color: #2a52be;
   left: 15%;
   padding: 8px;
+  font-size: 18px;
+  font-family: 'Tangerine', serif;
 }
 
 #button1{
   position: fixed;
-  left: 30%;
+  left: 22%;
   top: 2.5%;
+  border-radius: 12px;
 }
 
 #button2{
   position: fixed;
-  left: 39%;
+  left: 34%;
   top: 2.5%;
+  border-radius: 12px;
 }
 
 #button3{
   position: fixed;
-  left: 47%;
+  left: 44.5%;
   top: 2.5%;
+  border-radius: 12px;
 }
 
 #button4{
   position: fixed;
-  left: 56.5%;
+  left: 57.5%;
   top: 2.5%;
+  border-radius: 12px;
 }
 
 #button5{
   position: fixed;
-  left: 65.5%;
+  left: 69%;
   top: 2.5%;
+  border-radius: 12px;
 }
 
 .LocationTempRange {
   position: absolute;
   text-align: center;
   top: 10%;
+}
+
+.sunrise-sunset {
+  background-color: white;
 }

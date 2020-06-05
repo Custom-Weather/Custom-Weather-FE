@@ -1,0 +1,12 @@
+.book-info {
+  position: fixed;
+  background-color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 25%;
+  top: 8%;
+  left: 7%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  font-size: 8px;
+}

@@ -79,7 +79,9 @@ class App extends Component {
               <div className='background-image'>
                 <BackgroundImage desc={this.state.weather.desc} />
               </div>
-              <BackButton />
+              <div className='back-button'>
+                <BackButton />
+              </div>
               <div className='weather-components'>
                 <Weather weather={this.state.weather} location={this.state.location}/>
               </div>

@@ -13,6 +13,7 @@ const EventInfo = ({ notifications }) => {
 
   return (
     <div className='event-info'>
+    <h3> Get out of your comfort zone at an event: </h3>
       {events}
     </div>
   );

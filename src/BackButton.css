@@ -1,0 +1,15 @@
+.btn-back {
+  /* background-color: white; */
+  background-color: #fcffa4;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    opacity: 0.9;
+    border-radius: 30px;
+}
+
+#arrow-img {
+  width: 60%;
+  height: 60%;
+}

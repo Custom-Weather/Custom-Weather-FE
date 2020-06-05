@@ -17,7 +17,7 @@ class Weather extends Component {
 
   hourlyForecast = this.props.weather.hourly.map(weather => {
     return (
-      <div className='single-forecast'>
+      <div className='single-forecast' id={'single-forecast-'+ this.props.weather.hourly.indexOf(weather)}>
       <HourlyForecast
       hour={weather.dt}
       icon={weather.weather[0].icon}
@@ -31,7 +31,6 @@ class Weather extends Component {
   books = (Object.keys(this.props.weather.notifications).length === 2)
 
   render () {
-
     return (
       <div className='weather-comps'>
         <h1 className='current-location'>{this.props.location}</h1>
@@ -58,9 +57,9 @@ class Weather extends Component {
 
         <Toggle render ={({display, toggle}) => (
           <div>
-          {display && <SunriseSunset
+          {display && <div className='sunrise-sunset'><SunriseSunset
           sunrise={this.props.weather.sunrise}
-          sunset={this.props.weather.sunset}/>}
+          sunset={this.props.weather.sunset}/></div>}
           <button onClick={toggle} className="nav-bar" id='button1'>Sunrise & Sunset</button>
           </div>
         )}
@@ -69,7 +68,7 @@ class Weather extends Component {
         <Toggle render ={({display, toggle}) => (
           <div>
           {display && <div className="hourly-forecast">
-            <h4>  Hourly Forecast </h4>
+            <h4 id='forecast-title' className='single-forecast'>  Hourly Forecast </h4>
             {this.hourlyForecast}
           </div>}
           <button onClick={toggle} className="nav-bar" id='button4'>Hourly Forecasts</button>
