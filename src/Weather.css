@@ -36,49 +36,52 @@
   position: fixed;
   right: 2%;
   top: 0%;
-  -webkit-text-fill-color: white;
+  -webkit-text-fill-color: #fcffa4;
   -webkit-text-stroke: 2px black;
 }
 
 .nav-bar{
   z-index: 100;
-  color: red;
-  background-color: lightyellow;
+  color: white;
+  /* background-color: #fcffa4; */
+  background-color: #2a52be;
   left: 15%;
   padding: 8px;
+  font-size: 18px;
+  font-family: 'Tangerine', serif;
 }
 
 #button1{
   position: fixed;
-  left: 30%;
+  left: 22%;
   top: 2.5%;
   border-radius: 12px;
 }
 
 #button2{
   position: fixed;
-  left: 39%;
+  left: 34%;
   top: 2.5%;
   border-radius: 12px;
 }
 
 #button3{
   position: fixed;
-  left: 47%;
+  left: 44.5%;
   top: 2.5%;
   border-radius: 12px;
 }
 
 #button4{
   position: fixed;
-  left: 56.5%;
+  left: 57.5%;
   top: 2.5%;
   border-radius: 12px;
 }
 
 #button5{
   position: fixed;
-  left: 65.5%;
+  left: 69%;
   top: 2.5%;
   border-radius: 12px;
 }
