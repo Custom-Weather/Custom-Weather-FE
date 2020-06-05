@@ -30,6 +30,15 @@
 
 .temp-container {
   background-color: white;
+  padding: 30px;
+  padding-left: 145px;
+  padding-right: 133px;
+  padding-bottom: 170px;
+  position: fixed;
+  left: 41%;
+  top: 13%;
+  z-index: -1;
+  border-radius: 8px;
 }
 
 .high{
@@ -64,7 +73,7 @@
   font-size: 64px;
   background-color: white;
   padding: 10px;
-  padding-left: 65px;
+  padding-left: 58px;
   padding-right: 57px;
   /* border-radius: 8px; */
   border-top-left-radius: 8px;
