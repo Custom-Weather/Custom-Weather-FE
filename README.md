@@ -1,3 +1,5 @@
+<img width="760" alt="Homepage" src="https://user-images.githubusercontent.com/54868358/83888649-62a7df80-a707-11ea-9c60-6175634d383f.png">
+
 ### Description 
 Custom-Weather-FE(Under the Weather) is a React app built over two weeks by backend students at Turing School of Software and Design. Our goal was to create a weather app that does more than give you just the temperatures, but makes suggestions on music, movies, books, and activities to participate in, all based on the weather. 
 
@@ -9,7 +11,7 @@ If you'd like to checkout the frontend React application, it can be found at htt
 * Kathleen Carroll - https://github.com/kathleen-carroll
 * David Holtkamp - https://github.com/david-holtkamp
 
-<img width="760" alt="Dashboard screenshot" src="https://user-images.githubusercontent.com/54868358/83806087-2d02e800-a66e-11ea-9df9-e1319b139784.png">
+<img width="760" alt="Dashboard screenshot" src="https://user-images.githubusercontent.com/54868358/83888670-68052a00-a707-11ea-8aa4-30d139d1d6ea.png">
 
 ### Local Installation
 
