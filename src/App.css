@@ -71,3 +71,9 @@
 .form-only {
   text-align: center;
 }
+
+.back-button {
+  position: fixed;
+  top: 2%;
+  left: 3%;
+}

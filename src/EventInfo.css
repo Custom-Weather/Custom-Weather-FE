@@ -1,0 +1,10 @@
+.event-info {
+  position: fixed;
+  background-color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 20%;
+  top: 13%;
+  left: 7%;
+  border-radius: 8px;
+}

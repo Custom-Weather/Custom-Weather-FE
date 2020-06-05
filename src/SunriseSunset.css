@@ -1,22 +1,48 @@
 .sunrise-sunset {
   text-align: center;
-  display: inline-inline-block;
 }
 
-.sunrise {
-  float: left;
+.sunrise-text {
   display: inline-block;
+  position: fixed;
+  top: 46%;
+  left: 43.5%;
+  background-color: white;
+  z-index: 1;
 }
 
 .sunset {
   display: inline-block;
-  float: left;
+  position: fixed;
+  top: 46%;
+  left: 53.5%;
+  background-color: white;
+  z-index: 1;
 }
 #sunrise-img {
-  width: 60%;
-  align-content: center;
+  width: 10%;
+  position: fixed;
+  height: 10%;
+  top: 40%;
+  left: 40%;
+  background-color: white;
+  padding: 10px;
+  padding-top: 0px;
+  padding-bottom: 8px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
 }
 
 #sunset-img {
-  width: 60%;
+  width: 8%;
+  height: 8%;
+  left: 51%;
+  top: 40%;
+  position: fixed;
+  background-color: white;
+  padding: 10px;
+  padding-bottom: 13px;
+  padding-right: 25px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
 }

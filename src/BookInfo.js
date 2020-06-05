@@ -12,6 +12,7 @@ const BookInfo = ({ notifications }) => {
 
   return (
     <div className='book-info'>
+    <h3> Read a book for once: </h3>
       <p>{books}</p>
     </div>
   )

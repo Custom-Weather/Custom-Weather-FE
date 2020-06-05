@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom'; // <--- import `withRouter`. We will use this in the bottom of our file.
+import arrowImg from './images/back-arrow.png'
+import './BackButton.css';
 
 class BackButton extends Component {
 
@@ -10,7 +12,7 @@ class BackButton extends Component {
   render() {
     return (
       <button onClick={this.home.bind(this)} className="btn-back">
-        Go Back
+        <img id='arrow-img' alt='arrow-image' src={arrowImg}></img>
       </button>
     )}
 }

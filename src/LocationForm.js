@@ -57,4 +57,4 @@ class LocationForm extends Component {
   }
 }
 
-export default (LocationForm); // <--- make sure to wrap your component with `withRouter()`
+export default withRouter(LocationForm); // <--- make sure to wrap your component with `withRouter()`

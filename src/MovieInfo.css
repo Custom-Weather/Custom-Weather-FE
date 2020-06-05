@@ -1,0 +1,12 @@
+.movie-info {
+  position: fixed;
+  background-color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 25%;
+  top: 38%;
+  left: 7%;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  font-size: 8px;
+}

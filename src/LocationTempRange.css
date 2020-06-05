@@ -1,21 +1,70 @@
 #high-temp-img{
+  position: fixed;
   height: 5%;
-  width: 5%;
+  width: 3%;
+  top: 25%;
+  left: 43%;
+  background-color: white;
+  padding: 14px;
+  padding-top: 15px;
+  padding-left: 44px;
+  padding-right: 44px;
+  /* padding-right: 15px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px; */
 }
 
 #low-temp-img{
+  position: fixed;
   height: 6%;
-  width: 6%;
+  width: 4%;
+  top: 25%;
+  left: 52%;
+  background-color: white;
+  padding: 10.5px;
+  padding-left: 35px;
+  padding-right: 39px;
+  /* border-top-left-radius: 8px; */
+  /* border-top-right-radius: 8px; */
 }
 
 .temp-container {
-  display: inline-block;
+  background-color: white;
 }
 
 .high{
-  float: left;
+  position: fixed;
+  left: 43%;
+  top: 30%;
+  background-color: white;
+  padding: 11px;
+  padding-right: 36px;
+  padding-left: 32px;
+  border-bottom-left-radius: 8px;
+  /* border-bottom-right-radius: 8px; */
 }
 
 .low{
-  float: right;
+  position: fixed;
+  left: 52%;
+  top: 30%;
+  background-color: white;
+  padding-top: 10px;
+  padding-bottom: 12px;
+  padding-left: 37px;
+  padding-right: 38px;
+  /* border-bottom-left-radius: 8px; */
+  border-bottom-right-radius: 8px;
+}
+
+.current{
+  position: fixed;
+  left: 43%;
+  top: 8%;
+  font-size: 64px;
+  background-color: white;
+  padding: 10px;
+  /* border-radius: 8px; */
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 }
