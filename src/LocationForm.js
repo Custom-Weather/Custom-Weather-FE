@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import { withRouter } from 'react-router-dom'; // <--- import `withRouter`. We will use this in the bottom of our file.
+import './LocationForm.css';
 
 class LocationForm extends Component {
 
@@ -42,15 +43,14 @@ class LocationForm extends Component {
   render() {
     return (
       <div>
-      <h1>Custom Weather</h1>
+      <h1 className='welcome-title'>Under the Weather</h1>
         <form onSubmit={this.submitForm.bind(this)}>
           <label>
-            Location:
             <input type="text" placeholder='Type in city and state' data-testid='location-input' ref={node => { this.location = node; }}
             />
           </label>
-          <button data-testid='input-submit' type="submit">Submit</button>
-          <button data-testid='current-submit' type="submit">Use Current Location</button>
+          <button className='form-button' data-testid='input-submit' type="submit">Submit</button>
+          <button className='form-button' data-testid='current-submit' type="submit">Use Current Location</button>
         </form>
       </div>
     );
